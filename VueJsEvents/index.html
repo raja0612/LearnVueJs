@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js Learning</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+
+ <button v-on:click="buttonEvent">Click Me</button> <br>
+<div>
+ Name: <input type="text" v-on:keyup.space="spaceEnterEvent" />
+ </div>
+
+ <p v-on:mousemove="ShowCoordinates">{{ x }}  {{ y }}</p>
+
+ <button v-on:click="increase">Increase</button>
+ <p>{{ value }}</p>
+
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
