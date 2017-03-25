@@ -26,6 +26,27 @@
 
 <div class="demo"  @click="attachBlack = !attachBlack" :class="vueJsColorClass"></div>
 
+<hr>
+<!-- Appply CSS classes using names-->
+
+
+<!-- the below div adds the box and adds vue js css class property to color vue js instance data -->
+<div class="demo" :class="color"></div>
+
+<!-- v-model is two way binding to html and vue js instance. so v-model points the vue js data property color.
+so if user types some color name that value binds to vue js data property called color -->
+<input type="text" v-model="color">
+
+
+
+
+<!--  array of colors to :class property-->
+
+<!-- Intiallly this array as orange color from css styles and if colorArray property empty then take the green property-->
+<div class="demo" :class="[colorArray,{green: attachGreen}]"></div>
+
+<input type="text" v-model="colorArray" >
+
 </div>
 
 

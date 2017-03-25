@@ -7,7 +7,9 @@ new Vue({
 		attachRed:false,
 		attachGreen:false,
 		attachBlue:false,
-		attachBlack:false
+		attachBlack:false,
+		color:'your color',
+		colorArray: 'orange'
 
 	},
 
