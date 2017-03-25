@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js Dynamic CSS Styles</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+	
+
+<!-- general way is just add css class proprty here-->	
+<div class="demo red"></div>
+
+
+<!-- Vue Js Style when we click on demo box add or remove color-->
+<div class="demo"  @click="attachRed = !attachRed" :class="{red: attachRed,blue:!attachRed}">
+</div>
+
+
+<div class="demo"   @click="attachGreen = !attachGreen" :class="{green: attachGreen}"></div>
+
+
+<div class="demo"  @click="attachBlue = !attachBlue" :class="{blue:attachBlue}"></div>
+
+
+<div class="demo"  @click="attachBlack = !attachBlack" :class="vueJsColorClass"></div>
+
+</div>
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
