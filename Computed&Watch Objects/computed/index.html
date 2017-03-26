@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Computed Property</title>
+	<script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+<div id="app">
+
+  <button v-on:click="counter++">Increase</button>
+  <button v-on:click="counter--">Decrease</button>
+  <button v-on:click="secondCounter++">Increase Second</button>
+
+  <p>Counter : {{ counter }}</p>
+  <p>Second Counter : {{ secondCounter }}</p>
+  <p>{{ result() }} | {{ output }}</p>
+
+  <!-- when index.html is loaded first time.
+
+    1. {{ counter }} expression is evaluated.
+
+    2. {{ secondCounter }} expression is evaluated.
+
+    3. result () and output methods will be executed.
+
+
+
+    when we click on either Increase or Decrease button  result() and output will be executed.
+
+    because both these vue js methods accessing the counter variable.
+
+    but when we click on Increase Second button only  secondCounter value and result() function
+
+    will be executed. because result() function  will be executed every time.
+
+    but computed property {{ output }} will not be executed, because the computed property of 
+
+    vue js methods observing only counter varibale .It doesnot know about secondCounter data property.
+
+    so computed property will only excute only when particular data properties of vue js instance has been chnaged.
+
+
+
+
+
+
+  -->
+
+  
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>

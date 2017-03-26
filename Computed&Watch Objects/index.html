@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computed and Watch Property</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+
+  <!--  Accessing Vue Js Instance Data properties through Vue Instance Methods-->
+  <button v-on:click="increase">Increase</button>
+  <button v-on:click="decrease">Decrease</button>
+  <br>
+
+
+  <p>  Counter : {{ counter }}</p>
+  <p>  Result :{{ result }}</p>
+
+<!--  Accesing Vue Js Instance Data properties directly-->
+  <button v-on:click="counter++"> Direct Increase</button>
+  <button v-on:click="counter--">Direct Decrease</button>
+  <br>
+  <p> Direct Result : {{ directResult() }}</p>
+  
+   
+</div>
+
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
