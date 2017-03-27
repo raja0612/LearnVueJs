@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Styles without CSS Classes</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+
+  <div class="demo" :style="{'background-color': color}"></div>
+
+  <div class="demo" :style="myStyle"></div>
+
+
+  <!-- Styling elements with array syntax-->
+
+  <div class="demo" :style="[myStyle,{height: height + 'px'}]"></div>
+
+  <p>color :<input type="text"  v-model="color"></p>
+  <p>width: <input type="text"  v-model="width"></p>
+  <p>height:<input type="text"  v-model="height"></p>
+
+
+  <div class="statusBar" :style="statusBarWidth"></div>
+
+
+
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
