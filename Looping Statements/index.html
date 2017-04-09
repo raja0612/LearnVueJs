@@ -66,13 +66,15 @@
 <hr>
    <div v-for ="person in persons"> 
 
-       <spn v-for = "(value,key,index) in person">  
+       <span v-for = "(value,key,index) in person">  
     
           {{ key }} . {{ value }} ({{index}})
 
        </span>
 
  </div>
+
+ <span v-for ="n in 10">{{n}}</span>
 
 	
   </div>
