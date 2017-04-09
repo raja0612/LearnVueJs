@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conditional Statements</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+   <div id="app">
+
+
+    <p  v-if="show"> Vuejs IF condtional directive synatax  v-if="boolean value"</p>
+
+    <button @click= "show = !show">
+
+        <span v-if="show">Hide Syntax</span>
+        <span v-else>Show Syntax</span>
+
+        </button>
+
+       <p>{{ show }}</p>
+
+
+
+       <!-- v-if directive will add or remove html element from DOM Based upon boolean condition value-->
+
+       <!-- v-show directive hides the html element from DOM but not removed-->
+
+
+       <p v-show="show">Rajashekhar Ramayampeta</p>
+
+	
+  </div>
+</body>
+
+<script type="text/javascript" src="app.js"></script>
+
+
+</html>

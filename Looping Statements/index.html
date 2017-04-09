@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conditional Statements</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+   <div id="app">
+
+   <!-- v-for directive syntax-->
+
+      <ul>
+
+        <li v-for="ingredient in ingredients"> {{ ingredient }}</li>
+
+
+        <!-- index of array elements-->
+
+        <li v-for= "(element , i) in ingredients">{{  element }} ({{ i   }})</li>
+
+      </ul>
+
+
+    <template v-for= "(element , index) in ingredients"> <!--HTML5 element -->
+        	
+
+           <h2>{{ index }} -> {{ element }}</h2>
+
+   </template>
+
+
+
+  <hr>
+
+  <p> looping through the array of objects</p>
+
+  <ul>
+
+     <li v-for ="person in persons"> {{ person.name}}</li>
+
+  </ul>
+
+
+  <p> Nested for loops </p>
+
+
+  <ul>
+
+    <!-- person varibale points the each object in persons array--> 
+
+     <li v-for ="person in persons"> 
+
+     <!--  again iterate throgh each person object-->
+      
+       <div v-for = "value in person">  
+
+          <!--here value varible is the single  person object .It prints only values of persons array -->
+        {{value}}
+
+       </div>
+
+
+     </li>
+
+  </ul>
+<hr>
+   <div v-for ="person in persons"> 
+
+       <spn v-for = "(value,key,index) in person">  
+    
+          {{ key }} . {{ value }} ({{index}})
+
+       </span>
+
+ </div>
+
+	
+  </div>
+</body>
+
+<script type="text/javascript" src="app.js"></script>
+
+
+</html>
