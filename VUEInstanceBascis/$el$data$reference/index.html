@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VUE Js Instance - under the hood</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+
+   {{ title }}
+
+
+ <div>
+   <button @click="show$dataDemo" ref="myButton">$data</button>  
+ </div>
+</div>
+
+<!-- The below div will be initialized by $mount() method of Vue -->
+<hr>
+<div id="app2">
+	
+  {{ mount }}
+
+</div>
+
+<hr>
+<div id ="app3"></div>
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
