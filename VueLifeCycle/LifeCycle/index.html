@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue Js Instance Life Cycle</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+
+
+   <p> When Vue Js Instance is intialized , defaultly beforeCreate() , created(), beforeMount(), mounted() will be called
+
+      see console results for understanding purpose
+   </p>
+
+   <p>{{ title }}</p>
+
+   <button @click="title = 'Title is chnaged' " style="background-color:green">Life Cycle</button>
+
+   <p>When  you click above button beforeUpadte() & update() methods will be called only one time.</p>
+
+
+
+    <button @click="destroy();"  style="background-color:red">Destroy</button>
+
+
+    <p>When  you click above button beforeDestroy() & destroyed() methods will be called only one time.And Vue js instance is no more exist.</p>
+
+  
+</div>
+</body>
+
+<script type="text/javascript" src="app.js"></script>
+
+
+</html>
