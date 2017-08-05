@@ -7,3 +7,11 @@
       </div>
   </div>
 </template>
+
+<style>
+
+ h1{
+   font-family: sans-serif;
+   font-weight: 200px;
+ }
+</style>

@@ -14,16 +14,16 @@
 </template>
 
 <script>
-  import Header from './Header.vue';
-  import Servers from './Servers.vue';
-  import ServerInfo from './ServerInfo.vue';
-  import Footer from './Footer.vue';
+  import Header from './components/shared/Header.vue';
+  import Servers from './components/servers/Servers.vue';
+  import ServerInfo from './components/servers/ServerInfo.vue';
+  import Footer from './components/shared/Footer.vue';
 
   export default {
       components : {
       'app-header' : Header,
       'app-servers' : Servers,
-      'server-info-' : ServerInfo,
+      'server-info' : ServerInfo,
       'app-footer' : Footer
       }
   }
