@@ -5,11 +5,17 @@
         <p> User Name :  {{name}} </p>
         <p> Reverse User Name :  {{reverseName()}} </p>
 
+        <p>User Age {{ userAge }}</p>
+
         <button @click='resetName'>Reset To Original</button>
+
+          <button @click='resetFn()'>Reset Function</button>
     </div>
 </template>
 
 <script>
+
+import { eventBus } from '../main';
   export default {
     // props : ['name'] default way
 
@@ -18,7 +24,9 @@
       name: {
           type: String,
           required: true
-       }
+       },
+       resetFn :Function,
+       userAge: Number
     },
 
     methods : {
@@ -30,8 +38,14 @@
          //to notify parent component from child component name propety is reset
 
          this.$emit('nameWasReset',this.name);
-        }
+       },
 
+    },
+   // vue js life cycle method
+    created(){
+        eventBus.$on('ageWasEditedByBus',(data)=>{
+          this.userAge = data;
+        });
     }
   }
 </script>
