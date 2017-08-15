@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h2>Quote component</h2>
+      <h2>Author Component</h2>
    </div>
 </template>
 
