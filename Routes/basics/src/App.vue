@@ -4,9 +4,10 @@
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <h1>Routing</h1>
 
-                <!-- This is vue js predefined attribute for routing-->
+
                 <hr>
                 <app-header></app-header>
+                <!-- This is vue js built in  component for routing-->
                 <router-view></router-view>
             </div>
         </div>
